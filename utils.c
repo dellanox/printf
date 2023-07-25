@@ -15,7 +15,7 @@ int is_printable(char c)
 }
 
 /**
- * append_hexa_code - Append ascci in hexadecimal code to buffer
+ * append_hexa_code - Append ascci in hexadecimal code to buffer.
  * @buffer: Array of chars.
  * @i: Index at which to start appending.
  * @ascii_code: ASSCI CODE.
@@ -83,4 +83,5 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 		return ((unsigned short)num);
 
 	return ((unsigned int)num);
+
 }
