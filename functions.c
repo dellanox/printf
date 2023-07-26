@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_char - Prints a char
- * @types: List a of arguments
+ * print_char - This prints a char
+ * @types: List types of the  arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
- * @width: Width
+ * @width: Width of the output
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
@@ -98,14 +98,14 @@ int print_percent(va_list types, char buffer[],
 
 
 /**
- * print_int - Print int
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+ * print_int - Print int i.e. integers.
+ * @types: Lists the type of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags:  Calculates active flags.
  * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * @precision: Precision specification.
+ * @size: Size specifier.
+ * Return: Number of chars printed.
  */
 int print_int(va_list types, char buffer[],
 	      int flags, int width, int precision, int size)
@@ -141,10 +141,10 @@ int print_int(va_list types, char buffer[],
 }
 
 /**
- * print_binary - Prints an unsigned number
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+ * print_binary - Prints an unsigned number.
+ * @types: Lista of arguments.
+ * @buffer: Buffer array to handle print sequence.
+ * @flags:  Calculates active flags.
  * @width: get width.
  * @precision: Precision specification
  * @size: Size specifier
