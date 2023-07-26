@@ -46,9 +46,19 @@ Handle the following conversion specifiers:
 -- ``d``
 --``i``
 ### [Man_3_printf.](https://photos.app.goo.gl/pY1W7jWLFGHLPa3S6)
-## Functions we use.
+## Functions use in this project.
 
 ````c
+Authorized functions and macros
+
+    write (man 2 write)
+    malloc (man 3 malloc)
+    free (man 3 free)
+    va_start (man 3 va_start)
+    va_end (man 3 va_end)
+    va_copy (man 3 va_copy)
+    va_arg (man 3 va_arg)
+
 int _putchar(char c); /*writes the character c to stdout */
 int _printf(const char *format, ...);/* function that produces output according to a format.*/
 int print_char(va_list c);/*writes the character c to stdout */
@@ -56,36 +66,48 @@ int print_string(va_list s);/*writes the character c to stdout */
 int print_int(va_list i);/*function that prints an integer */
 int print_dec(va_list d);/* function that prints an decimal*/
 ````
-## [Flowchart.](https://photos.app.goo.gl/5SQMnxrmd7nkLr3a6)
+
 ## How to use.
 ### Complilation
-All of the ``.c`` files along with a main.c file are to be compiled with ``gcc 4.8.4`` on Ubuntu 14.04 LTS with the flags ``-Wall Werror`` ``-Westra`` and ``-pedantic.``
+Your code will be compiled on Ubuntu 20.04 LTS with the flags: 
+$ gcc -Wall -Werror -Wextra -Wno-format -pedantic -std=gnu89 *.c -o printf
+
+expected executable after compilation./printf
 
 The files will be compiled this way:
 - ``gcc -Wall -Werror -Wextra -pedantic *.c``
-#### Use.
-In the ``main.c`` file, use the ``_printf`` function like so:
-```c
-#include "main.h"
-/**
- * main - main function of program
- * Return: always 0
- */
-int main(void)
-{
-	int num;
-	char *string;
-	
-	num = 98;
-	string = "Hello, ALX!"
-	_printf("%s is %i.\n", string, num);
-	return (0);
-}
-```
-```{bash}
-linux>$  gcc -Wall -Werror -Wextra -pedantic *.c -o print_program
-linux>$  ./print_program
-Hello, 
+
+linux>$  gcc -Wall -Werror -Wextra -Wno-format -pedantic -std=gnu89 *.c -o printf
+linux>$  ./printf
+	Let's try to printf a simple sentence.
+	Let's try to printf a simple sentence.
+	Length:[39, 39]
+	Length:[39, 39]
+	Negative:[-762534]
+	Negative:[-762534]
+	Unsigned:[2147484671]
+	Unsigned:[2147484671]
+	Unsigned octal:[20000001777]
+	Unsigned octal:[20000001777]
+	Unsigned hexadecimal:[800003ff, 800003FF]
+	Unsigned hexadecimal:[800003ff, 800003FF]
+	Character:[H]
+	Character:[H]
+	String:[I am a string !]
+	String:[I am a string !]
+	Address:[0x7ffe637541f0]
+	Address:[0x7ffe637541f0]
+	Percent:[%]
+	Percent:[%]
+	Len:[12]
+	Len:[12]
+	Unknown:[
+	]FF300008 ,ff300
+	]0f145736eff
+	]%
+	]21[:neL]
+	Unknown:[%r]
+ 
 linux>$
 ```
 ## Contributors
